@@ -1,0 +1,24 @@
+.calculation-section{
+    background-color: rgba(78, 182, 252, 0.089);
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.815);
+}
+.calculation-section h5{
+    font-weight: 600;
+}
+
+.calculation-section input{
+    background-color: rgba(78, 182, 252, 0.226);
+    border: none;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+.calculation-section button{
+    background-color: rgba(15, 157, 252, 0.767);
+    border: 0;
+    border-radius: 3px;
+    padding: 5px 40px;
+    color: white;
+    font-weight: bold;
+}

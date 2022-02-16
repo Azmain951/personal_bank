@@ -13,34 +13,34 @@
 </head>
 
 <body class="container">
-    <header class="my-5">
+    <header class="my-4">
         <h1 class="text-center text-info fw-bold">My Personal Accountant</h1>
     </header>
 
     <main>
-        <section class="d-flex">
+        <section class="d-flex justify-content-between">
             <div class="row gx-5">
-                <div class="col-7">
-                    <img class="img-fluid" src="images/banner.jpg" alt="">
+                <div class="col-12 col-lg-7">
+                    <img class="img-fluid" src="images/Background.png" alt="">
                 </div>
-                <div class="col-5 text-center bg-secondary p-5">
-                    <h4>Income</h4>
+                <div class="calculation-section col-12 col-lg-5 text-center p-5">
+                    <h5 class="mb-4">Income</h5>
                     <p>Income: <input id="total-income" type="text"></p>
 
-                    <h4>Expenses</h4>
+                    <h5 class="mb-4">Expenses</h5>
                     <p>Food: <input id="food-expense" type="text"></p>
                     <p>Rent: <input id="rent-expense" type="text"></p>
                     <p>Colthes: <input id="cloth-expense" type="text"></p>
 
                     <button id="calculate-btn" type="submit">Calculate</button>
 
-                    <h4>Total Expenses: <span id="total-expense"></span></h4>
-                    <h4>Balance: <span id="balance"></span></h4>
+                    <h5>Total Expenses: <span id="total-expense"></span></h5>
+                    <h5>Balance: <span id="balance"></span></h5>
 
                     <p>Save: <input id="saving-percentage" type="text"> % <button id="save-btn"
                             type="submit">Save</button></p>
-                    <h4>Saving Amount: <span id="saving-amount"></span></h4>
-                    <h4>Remaining Balance: <span id="remaining-balance"></span></h4>
+                    <h5>Saving Amount: <span id="saving-amount"></span></h5>
+                    <h5>Remaining Balance: <span id="remaining-balance"></span></h5>
                 </div>
 
             </div>
