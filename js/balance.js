@@ -4,13 +4,6 @@ function getInputValue(inputId) {
     return cost;
 }
 
-function totalExpenseCalculation(foodCost, rentCost, clothCost) {
-    const totalExpense = document.getElementById('total-expense');
-    const totalCost = foodCost + rentCost + clothCost;
-    totalExpense.innerText = totalCost;
-    return totalCost;
-}
-
 function savingAmountCalculation() {
     const savingPercentage = getInputValue('saving-percentage');
     const income = getInputValue('total-income');
@@ -31,15 +24,27 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const rentCost = getInputValue('rent-expense');
     const clothCost = getInputValue('cloth-expense');
 
-    if (income > 0 && foodCost > 0 && rentCost > 0 && clothCost > 0) {
-        const totalExpense = totalExpenseCalculation(foodCost, rentCost, clothCost);
 
+    if (isNaN(income) || isNaN(foodCost) || isNaN(rentCost) || isNaN(clothCost)) {
+        console.log('please input integer number');
+    }
+
+    else if (income < 0 || foodCost < 0 || rentCost < 0 || clothCost < 0) {
+        console.log('please input positive number');
+    }
+
+    else {
+        const totalExpense = document.getElementById('total-expense');
         const balancefield = document.getElementById('balance');
-        if (income > totalExpense) {
-            balancefield.innerText = income - totalExpense;
+
+        const totalCost = foodCost + rentCost + clothCost;
+
+        if (income >= totalCost) {
+            totalExpense.innerText = totalCost;
+            balancefield.innerText = income - totalCost;
         }
         else {
-            console.log()
+            console.log('expense exceed income');
         }
     }
 
