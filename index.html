@@ -25,17 +25,22 @@
                 </div>
                 <div class="col-5 text-center bg-secondary p-5">
                     <h4>Income</h4>
-                    <p>Income: <input type="text"></p>
+                    <p>Income: <input id="total-income" type="text"></p>
+
                     <h4>Expenses</h4>
-                    <p>Food: <input type="text"></p>
-                    <p>Rent: <input type="text"></p>
-                    <p>Colthes: <input type="text"></p>
-                    <button type="submit">Calculate</button>
-                    <h4>Total Expenses: <span></span></h4>
-                    <h4>Balance: <span></span></h4>
-                    <p>Save: <input type="text"> % <button type="submit">Save</button></p>
-                    <h4>Saving Amount: <span></span></h4>
-                    <h4>Remaining Balance: <span></span></h4>
+                    <p>Food: <input id="food-expense" type="text"></p>
+                    <p>Rent: <input id="rent-expense" type="text"></p>
+                    <p>Colthes: <input id="cloth-expense" type="text"></p>
+
+                    <button id="calculate-btn" type="submit">Calculate</button>
+
+                    <h4>Total Expenses: <span id="total-expense"></span></h4>
+                    <h4>Balance: <span id="balance"></span></h4>
+
+                    <p>Save: <input id="saving-percentage" type="text"> % <button id="save-btn"
+                            type="submit">Save</button></p>
+                    <h4>Saving Amount: <span id="saving-amount"></span></h4>
+                    <h4>Remaining Balance: <span id="remaining-balance"></span></h4>
                 </div>
 
             </div>
