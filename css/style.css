@@ -5,13 +5,20 @@
 }
 .calculation-section h5{
     font-weight: 600;
+    font-size: 20px;
+}
+
+.calculation-section span{
+    color: rgb(4, 155, 255);
 }
 
 .calculation-section input{
-    background-color: rgba(78, 182, 252, 0.226);
+    background-color: rgba(139, 208, 247, 0.479);
     border: none;
     border-radius: 2px;
     margin-left: 5px;
+    height: 35px;
+    padding: 10px;
 }
 
 .calculation-section button{
@@ -22,3 +29,35 @@
     color: white;
     font-weight: bold;
 }
+
+#saving-percentage{
+    width: 100px;
+    text-align: center;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #36bef4d7;
+    color: white;
+    position: absolute;
+    bottom: -150px;
+    right: 100px;
+    display: none;
+    width: 35%;
+    text-align: center;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }

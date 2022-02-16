@@ -6,11 +6,11 @@ function getInputValue(inputId) {
 
 function updateBalanceFields(income, foodCost, rentCost, clothCost) {
     if (isNaN(income) || isNaN(foodCost) || isNaN(rentCost) || isNaN(clothCost)) {
-        console.log('please input integer number');
+        errorMessage('input a number!!!');
     }
 
     else if (income < 0 || foodCost < 0 || rentCost < 0 || clothCost < 0) {
-        console.log('please input positive number');
+        errorMessage('enter a positive value!!!');
     }
 
     else {
@@ -24,7 +24,7 @@ function updateBalanceFields(income, foodCost, rentCost, clothCost) {
             balancefield.innerText = income - totalCost;
         }
         else {
-            console.log('expense exceed income');
+            errorMessage("Hold on...Your expenses are greater than your income!")
             balancefield.innerText = '';
         }
     }
@@ -34,10 +34,10 @@ function savingAmountCalculation() {
     const savingPercentage = getInputValue('saving-percentage');
     remainingBalanceField = document.getElementById('remaining-balance');
     if (isNaN(savingPercentage)) {
-        console.log('please enter valid value');
+        errorMessage('please enter a positive integer value');
     }
     else if (savingPercentage < 0) {
-        console.log('enter value greater than 0');
+        errorMessage('please enter a positive integer value');
     }
     else {
         const income = getInputValue('total-income');
@@ -48,7 +48,7 @@ function savingAmountCalculation() {
         const balance = parseFloat(balanceText);
 
         if (savingAmount > balance) {
-            console.log('not enough money');
+            errorMessage("You don't enough money for saving!!!");
             remainingBalanceField.innerText = '';
 
         }
@@ -59,7 +59,10 @@ function savingAmountCalculation() {
 }
 
 function errorMessage(message) {
-
+    const errorBox = document.getElementById('error-msg');
+    errorBox.innerText = message;
+    const alert = document.getElementById('alert-box');
+    alert.style.display = 'block';
 }
 
 
