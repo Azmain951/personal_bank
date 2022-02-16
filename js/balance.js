@@ -6,11 +6,11 @@ function getInputValue(inputId) {
 
 function updateBalanceFields(income, foodCost, rentCost, clothCost) {
     if (isNaN(income) || isNaN(foodCost) || isNaN(rentCost) || isNaN(clothCost)) {
-        errorMessage('input a number!!!');
+        errorMessage('main-error', 'input a number!!!');
     }
 
     else if (income < 0 || foodCost < 0 || rentCost < 0 || clothCost < 0) {
-        errorMessage('enter a positive value!!!');
+        errorMessage('main-error', 'enter a positive value!!!');
     }
 
     else {
@@ -24,7 +24,7 @@ function updateBalanceFields(income, foodCost, rentCost, clothCost) {
             balancefield.innerText = income - totalCost;
         }
         else {
-            errorMessage("Hold on...Your expenses are greater than your income!")
+            errorMessage('main-error', "Hold on...Your expenses are greater than your income!")
             balancefield.innerText = '';
         }
     }
@@ -34,10 +34,10 @@ function savingAmountCalculation() {
     const savingPercentage = getInputValue('saving-percentage');
     remainingBalanceField = document.getElementById('remaining-balance');
     if (isNaN(savingPercentage)) {
-        errorMessage('please enter a positive integer value');
+        errorMessage('saving-error', 'please enter a positive integer value');
     }
     else if (savingPercentage < 0) {
-        errorMessage('please enter a positive integer value');
+        errorMessage('saving-error', 'please enter a positive integer value');
     }
     else {
         const income = getInputValue('total-income');
@@ -48,7 +48,7 @@ function savingAmountCalculation() {
         const balance = parseFloat(balanceText);
 
         if (savingAmount > balance) {
-            errorMessage("You don't enough money for saving!!!");
+            errorMessage('saving-error', "You don't enough money for saving!!!");
             remainingBalanceField.innerText = '';
 
         }
@@ -58,15 +58,20 @@ function savingAmountCalculation() {
     }
 }
 
-function errorMessage(message) {
-    const errorBox = document.getElementById('error-msg');
-    errorBox.innerText = message;
-    const alert = document.getElementById('alert-box');
-    alert.style.display = 'block';
+function errorMessage(field, message) {
+    const error = document.getElementById(field);
+    error.innerText = message;
+    error.style.color = "red";
+}
+
+function noErrorMessage(field) {
+    const error = document.getElementById(field);
+    error.innerText = '';
 }
 
 
 document.getElementById('calculate-btn').addEventListener('click', function () {
+    noErrorMessage('main-error');
     const income = getInputValue('total-income');
     const foodCost = getInputValue('food-expense');
     const rentCost = getInputValue('rent-expense');
@@ -76,5 +81,6 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 });
 
 document.getElementById('save-btn').addEventListener('click', function () {
+    noErrorMessage('saving-error');
     savingAmountCalculation();
 });

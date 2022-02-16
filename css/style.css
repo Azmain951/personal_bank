@@ -1,3 +1,4 @@
+/* calculation section styles */
 .calculation-section{
     background-color: rgba(78, 182, 252, 0.089);
     border-radius: 5px;
@@ -34,30 +35,3 @@
     width: 100px;
     text-align: center;
 }
-
-.alert {
-    padding: 10px;
-    background-color: #36bef4d7;
-    color: white;
-    position: absolute;
-    bottom: -150px;
-    right: 100px;
-    display: none;
-    width: 35%;
-    text-align: center;
-  }
-  
-  .closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .closebtn:hover {
-    color: black;
-  }
