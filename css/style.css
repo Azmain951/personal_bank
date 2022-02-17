@@ -1,6 +1,7 @@
 /* calculation section styles */
 .calculation-section{
-    background-color: rgba(78, 182, 252, 0.089);
+    
+    background-color: rgba(155, 252, 98, 0.137);
     border-radius: 5px;
     color: rgba(0, 0, 0, 0.815);
 }
@@ -10,25 +11,27 @@
 }
 
 .calculation-section span{
-    color: rgb(4, 155, 255);
+    color: rgb(52, 146, 8);
+    font-weight: 700;
 }
 
 .calculation-section input{
-    background-color: rgba(139, 208, 247, 0.479);
+    background-color: rgba(164, 253, 146, 0.418);
     border: none;
     border-radius: 2px;
     margin-left: 5px;
-    height: 35px;
+    height: 48px;
     padding: 10px;
 }
 
 .calculation-section button{
-    background-color: rgba(15, 157, 252, 0.767);
+    background-color: rgb(41, 160, 31);
     border: 0;
     border-radius: 3px;
     padding: 10px 40px;
     color: white;
     font-weight: bold;
+    font-size: 18px;
 }
 
 #saving-percentage{
