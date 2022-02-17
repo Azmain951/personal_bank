@@ -28,8 +28,9 @@ function updateBalanceFields(income, foodCost, rentCost, clothCost) {
             balancefield.innerText = income - totalCost;
         }
         else {
-            errorMessage('main-error', "Hold on...Your expenses are greater than your income!")
-            balancefield.innerText = '';
+            errorMessage('main-error', "Hold on...Your expenses are more than your income!")
+            balancefield.innerText = income - totalCost;
+            balancefield.style.color = 'red';
         }
     }
 }
